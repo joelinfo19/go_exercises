@@ -3,7 +3,7 @@
 
 * GO API REST
   - Api Rest with Golang 
-  - Dependecies 
+  - Dependencies 
     - "github.com/gorilla/mux"
     - "github.com/githubnemo/compileDaemon"
  
