@@ -10,7 +10,7 @@ import (
 
 	"github.com/gorilla/mux"
 )
-
+//json struct
 type task struct {
 	ID      int    `json:ID`
 	Name    string `json:Name`
