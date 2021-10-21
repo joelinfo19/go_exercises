@@ -8,6 +8,9 @@ func main(){
 	//slices
 	cards:= []string{"Gola",newCard()}
 	cards=append(cards,"I am new")
+	for i,card:= range cards{
+		fmt.Println(i,card)
+	}
 	fmt.Println(cards)
 }
 func newCard() string{
