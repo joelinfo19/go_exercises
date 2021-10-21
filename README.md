@@ -7,6 +7,8 @@
   - Dependencies 
     - "github.com/gorilla/mux"
     - "github.com/githubnemo/compileDaemon"
+* GO EXAMPLES
+  - Go syntax
  
 
  
