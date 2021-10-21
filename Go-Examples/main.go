@@ -4,9 +4,12 @@ import "fmt"
 
 func main(){
 	//var card string ="Ace of spades"
-	card:= newCar()
-	fmt.Println(card)
+	//card:= newCar()
+	//slices
+	cards:= []string{"Gola",newCard()}
+	cards=append(cards,"I am new")
+	fmt.Println(cards)
 }
-func newCar() string{
+func newCard() string{
 	return "Ace of spades"
 }
