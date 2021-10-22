@@ -6,8 +6,11 @@ func main(){
 	//card:= newCar()
 	//slices
 	cards:= newDeck()
-	cards=append(cards,"I am new")
+	//cards=append(cards,"I am new")
+	hand,remainingCards:=deal(cards,5)
 	cards.print()
+	hand.print()
+	remainingCards.print()
 }
 //func newCard() string{
 //	return "Ace of spades"
