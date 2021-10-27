@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /* pointer exercise
 type contactInfo struct{
 	email string
@@ -66,13 +64,29 @@ func (pointerToPerson *person) updateName(newFirstName string) {
 //	return "Ace of spades"
 //}
 
-
+/* map exercises
 func main(){
 
+	//first mode for map
 	colors:= map[string]string{
 		"red":"red",
 		"green":"green",
 	}
-	fmt.Println(colors)
+	//fmt.Println(colors)
+	//second mode
+	//colors:= make(map[string]string)
+	//colors["hola"]="hola"
+	//delete(colors,"hola")
+	//fmt.Println(colors)
+	printMap(colors)
+}
+func printMap(c map[string]string) {
+	for color,hex:=range c{
+		fmt.Println("Hex code for",color,"is",hex)
+	}
+
+}
+*/
+func main(){
 
 }
