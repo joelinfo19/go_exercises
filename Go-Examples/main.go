@@ -90,6 +90,7 @@ func printMap(c map[string]string) {
 }
 */
 /* INTERFACE GO*/
+// It help us to reduce code
 type bot interface {
 	getGreeting() string
 }
