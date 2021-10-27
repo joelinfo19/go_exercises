@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /* pointer exercise
 type contactInfo struct{
 	email string
@@ -87,6 +89,23 @@ func printMap(c map[string]string) {
 
 }
 */
-func main(){
+/* INTERFACE GO*/
+type bot interface {
+	getGreeting() string
+}
 
+type englishBot struct{
+}
+type spanishBot struct {
+
+}
+func main(){
+	eb:= englishBot{}
+	printGreeting(eb)
+}
+func printGreeting(b bot)  {
+	fmt.Println(b.getGreeting())
+}
+func (englishBot) getGreeting() string{
+	return "hi there!"
 }
