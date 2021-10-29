@@ -12,6 +12,7 @@ import (
 )
 
 func (r *mutationResolver) CreateVideo(ctx context.Context, input model.NewVideo) (*model.Video, error) {
+	// first video
 	video:= &model.Video{
 		ID:fmt.Sprintf("T%d",rand.Int()),
 		Title: input.Title,
