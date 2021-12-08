@@ -2,20 +2,19 @@
 
 package model
 
-type NewVideo struct {
+type Book struct {
+	ID     string `json:"id"`
 	Title  string `json:"title"`
-	URL    string `json:"url"`
+	Author *User  `json:"author"`
+}
+
+type NewBook struct {
+	Title  string `json:"title"`
 	UserID string `json:"userId"`
+	Name   string `json:"name"`
 }
 
 type User struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
-}
-
-type Video struct {
-	ID     string `json:"id"`
-	Title  string `json:"title"`
-	URL    string `json:"url"`
-	Author *User  `json:"author"`
 }

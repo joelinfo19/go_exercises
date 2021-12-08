@@ -2,25 +2,28 @@
 #
 # https://gqlgen.com/getting-started/
 
-type Video{
-  id:ID!
-  title:String!
-  url:String!
-  author:User!
 
+type Book {
+  id: ID!
+  title: String!
+  author: User!
 }
-type User{
-  id:ID!
-  name:String!
+
+type User {
+  id: ID!
+  name: String!
 }
-type Query{
-  videos:[Video!]!
+
+type Query {
+  books: [Book!]!
 }
-input NewVideo{
-  title:String!
-  url:String!
-  userId:String!
+
+input NewBook {
+  title: String!
+  userId: String!
+  name: String!
 }
-type Mutation{
-  createVideo(input:NewVideo!):Video!
+
+type Mutation {
+  createBook(input: NewBook!): Book!
 }

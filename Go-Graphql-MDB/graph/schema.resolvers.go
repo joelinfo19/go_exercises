@@ -8,23 +8,25 @@ import (
 	"fmt"
 	"go-graphql-mdb/graph/generated"
 	"go-graphql-mdb/graph/model"
+	"go-graphql-mdb/controllers"
 	"math/rand"
 )
 
-func (r *mutationResolver) CreateVideo(ctx context.Context, input model.NewVideo) (*model.Video, error) {
-	// first video
-	video:= &model.Video{
-		ID:fmt.Sprintf("T%d",rand.Int()),
+func (r *mutationResolver) CreateBook(ctx context.Context, input model.NewBook) (*model.Book, error) {
+	book := &model.Book{
+		ID:    fmt.Sprintf("T%d", rand.Int()),
 		Title: input.Title,
-		URL: input.URL,
-		Author: &model.User{ID: input.UserID,Name: "user " + input.UserID },
+		Author: &model.User{
+			ID:   input.UserID,
+			Name: input.Name,
+		},
 	}
-	r.videos = append(r.videos,video)
-	return video,nil
-}
+	controllers.Save(book)
+	return book, nil}
 
-func (r *queryResolver) Videos(ctx context.Context) ([]*model.Video, error) {
-	return r.videos,nil
+func (r *queryResolver) Books(ctx context.Context) ([]*model.Book, error) {
+	books := controllers.FindAll()
+	return books, nil
 }
 
 // Mutation returns generated.MutationResolver implementation.

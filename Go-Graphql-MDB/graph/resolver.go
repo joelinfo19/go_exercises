@@ -5,6 +5,6 @@ import "go-graphql-mdb/graph/model"
 //go:generate go run github.com/99designs/gqlgen
 
 type Resolver struct{
-	videos []*model.Video
+	books []*model.Book
 	
 }
