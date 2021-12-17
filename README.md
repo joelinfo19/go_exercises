@@ -10,6 +10,7 @@
 * GO EXAMPLES
   - Go syntax and exercises
 * GO,GRAPHQL AND MONGODB
+  - Go queries and mutation
  
 
  
