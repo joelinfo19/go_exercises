@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-const uri="mongodb+srv://tesla:ubOLswg0Ey8McbIu@cluster0.vi7oi.mongodb.net"
+const uri="YOUR DATA BASE"
 
 const (
 	DB  = "test"
